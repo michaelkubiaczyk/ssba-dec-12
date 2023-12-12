@@ -1,4 +1,5 @@
 package org.company.application.simplespringbootapp;
+import org.owasp.encoder.Encode; 
 
 public class InfoPage {
 	// TODO: add more stuff here.
@@ -7,7 +8,7 @@ public class InfoPage {
 		if ( email == null ) {
 			return "No email configured.";
 		} else {
-			return "Current email is: " + sanitizers.sanitize(email);
+			return "Current email is: " + Encode.forHtml(email);
 		}		
 	}
 	
