@@ -1,6 +1,8 @@
 package org.company.application.simplespringbootapp;
 
-public class InfoPage {
+import org.company.security.obsolete.sanitizers;
+
+public class oldInfoPage {
 	// TODO: add more stuff here.
 	public static String showInfo( String email ) {
 
@@ -9,15 +11,5 @@ public class InfoPage {
 		} else {
 			return "Current email is: " + sanitizers.sanitize(email);
 		}		
-	}
-	
-	private static class sanitizers {
-		public static String sanitize( String input ) {
-			// FIXME: not sanitizing, just checking presence of '@' symbol
-			if ( input.indexOf('@') < 0 ) {
-				return "";
-			}
-			return input;
-		}
 	}
 }
